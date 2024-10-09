@@ -38,8 +38,8 @@ Slut av program
 
 */
 
-let name = prompt('Hej, vad heter du? : ');
-let age = prompt(`Ok ${name}, hur gammal är du?`)
+const name = prompt('Hej, vad heter du? : ');
+const age = prompt(`Ok ${name}, hur gammal är du?`)
 
 if (age < 15) {
     console.log(`Du måste ha hjälm när du cyklar, ${name}!`)
