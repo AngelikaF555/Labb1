@@ -18,7 +18,7 @@ Om inte match - output: "Inkräktare"
 let password = "password"
 let userPassword = prompt("Ange lösenord")
 
-if (password == userPassword) {
+if (password === userPassword) {
     alert("Välkommen")
 } else {
     alert("Inkräktare!")

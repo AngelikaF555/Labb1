@@ -11,15 +11,44 @@ När ni har fått en känsla för hur detta utspelar sig mellan två människor 
 Börja med att göra en flowchart som beskriver processen. 
 Gå sedan vidare och skriv pseudokod. 
 Nedan finner ni en startkod för hur man gör ett slumpvalt nummer.
+
+PSUDO-KOD
+Ta fram ett slumpvalt värde mellan 0 och 10
+input: fråga user om gissning, spara i variabel
+jämför det slumpvalda värdet och gissningen:
+om gissningen och det slumpvalda värdet matchar - output: "You guessed right!" -> SLUT
+om gissning var högre än slumpvalda värdet -> output; "The right number is lower"
+om gissning var lägre än slumpvalda värdet -> output; "The right number is higher"
+input: fråga user om gissning, spara i variabeln igen
+om gissningen och det slumpvalda värdet matchar -> output: "You guessed right!"
+om gissning inte matchar -> output: "You guessed wrong, better luck next time"
+
 */ 
 
 //Tar ett slumpvalt värde mellan 0 och 10
-var nummer = Math.random();
+var nummer = Math.random(); //random number between 0-1, inkluding 0, exkluding 1
+console.log(nummer); //ex number = 0.6777
+nummer = nummer * 10; //ex number 6.7777
 console.log(nummer);
-nummer = nummer * 10;
-console.log(nummer);
-nummer = Math.round(nummer);
+nummer = Math.round(nummer); //round to integer
 console.log(nummer);
 
 
 /* FORTSÄTT MED EGEN KOD HÄR */
+var i = 1
+var guess = prompt("Guess a integer between 0 and 10")
+
+while (i < 2) {
+    if (guess < nummer && i < 3)  {
+        guess = prompt(`${guess} was to low. Guess a new integer between 0 and 10. Right answer is ${nummer}`)
+        i += 1
+    } else if (guess > nummer && i < 3) {
+        guess = prompt(`${guess} was to high. Guess a new integer between 0 and 10.  Right answer is ${nummer}`)
+        i += 1
+    } else {
+        alert(`You won! ${nummer} was right!`) //is not shown if second guess was correct
+        break
+    }
+} if (guess != nummer){
+    alert("You lost. Better luck next time.")
+}

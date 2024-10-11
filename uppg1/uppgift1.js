@@ -40,17 +40,20 @@ Slut av program
 
 const name = prompt('Hej, vad heter du? : ');
 const age = prompt(`Ok ${name}, hur gammal är du?`)
+let message = ""
+
+if (isNana(age)) {
+    alert('Vänligen ange rätt ålder.')
+}
 
 if (age < 15) {
-    console.log(`Du måste ha hjälm när du cyklar, ${name}!`)
+    message += (`Du måste ha hjälm när du cyklar, ${name}!`)
+} if (age < 18) {
+    message += (`Du får inte rösta, ${name}!`)
+} if (age < 23) {
+    message += (`Det blir ingen finlandsfärga, ${name}!`)
 } else {
+    message += (`Du är gammal nog att göra vad du vill, ${name}!`)
 }
-if (age < 18) {
-    console.log(`Du får inte rösta, ${name}!`)
-} else {
-}
-if (age < 23) {
-    console.log(`Det blir ingen finlandsfärga, ${name}!`)
-} else {
-    console.log(`Du är gammal nog att göra vad du vill, ${name}!`)
-}
+
+alert(message)

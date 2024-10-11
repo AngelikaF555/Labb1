@@ -5,4 +5,25 @@ Spela det verkliga spelet med en vän för att se hur processen går till.
 Kom ihåg att bryta ner problemet i flera moduler och få dessa att funka separat.
 
 Parprogrammering uppmuntras. Använd er av tekniker från tidigare uppgifter för att lösa denna uppgift.
+
+
+PSUDO-KOD
+Datorn slumpar mellan sten sax påse
+användaren anger sten/sax/påse
+
+om lika
+    det blev lika
+om spelare vann
+    du vann
+om datorn vann
+    du förlora
+
+More PSUDOKOD for when player wins
+
+Player  |   Computer
+--------------------
+sten    |   sax
+sax     |   påse
+påse    |   sten
 */
+
