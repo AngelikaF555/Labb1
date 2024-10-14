@@ -25,5 +25,8 @@ Player  |   Computer
 sten    |   sax
 sax     |   påse
 påse    |   sten
+
+markus föreslår att ha en while loop som är true tills det blir false som när inputen är sten sax eller påse för att förhindra att inte få någåto annat
+str.toLowerCase gör att user input alltid blir små bokstäver så blir det mer fail-safe
 */
 
