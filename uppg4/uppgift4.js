@@ -37,15 +37,18 @@ console.log(nummer);
 /* FORTSÄTT MED EGEN KOD HÄR */
 let guess = Number(prompt(`Guess a integer between 0 and 10 (Right answer is ${nummer})`))
 
-while (typeof(guess) != typeof(1) || Math.round(guess) != guess) {
-    guess = Number(prompt(`Must be a number. Guess a integer between 0 and 10 (Right answer is ${nummer})`))
+while (Math.round(guess) != guess) {
+    guess = Number(prompt(`Must be a integer. Guess a integer between 0 and 10 
+        (Right answer is ${nummer})`))
 }
 
 for (let i = 0; i < 1; i++) {
     if (guess < nummer)  {
-        guess = prompt(`${guess} was to low. Guess a new integer between 0 and 10. (Right answer is ${nummer})`)
+        guess = prompt(`${guess} was to low. Guess a new integer between 0 and 10. 
+            (Right answer is ${nummer})`)
     } else if (guess > nummer) {
-        guess = prompt(`${guess} was to high. Guess a new integer between 0 and 10. (Right answer is ${nummer})`)
+        guess = prompt(`${guess} was to high. Guess a new integer between 0 and 10. 
+            (Right answer is ${nummer})`)
     }
 
 } if (guess != nummer){

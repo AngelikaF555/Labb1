@@ -22,11 +22,40 @@ More PSUDOKOD for when player wins
 
 Player  |   Computer
 --------------------
-sten    |   sax
-sax     |   påse
-påse    |   sten
+stone    |   scissors
+scissors |   paper
+paper    |   stone
 
-markus föreslår att ha en while loop som är true tills det blir false som när inputen är sten sax eller påse för att förhindra att inte få någåto annat
-str.toLowerCase gör att user input alltid blir små bokstäver så blir det mer fail-safe
 */
 
+let computerInput = Math.floor(Math.random() * 3)
+console.log(`Computers choice: ${computerInput}`)
+
+switch(computerInput) {
+    case 0:
+        computerInput = "rock"
+        break
+    case 1:
+        computerInput = "paper"
+        break
+    case 2:
+        computerInput = "scissors"
+        break
+}
+
+let userInput = (prompt(`Choose rock, paper or scissors. Computers choice is ${computerInput}`)).toLowerCase()
+console.log(`Users choice: ${userInput}`)
+
+while (userInput != "rock" && userInput != "paper" && userInput != "scissors") {
+    userInput = (prompt("Choose rock, papper or scissors")).toLowerCase()
+}
+
+if (userInput == computerInput) {
+    alert('Tie!')
+} else if (userInput == "rock" && computerInput == "scissors"
+    || userInput == "paper" && computerInput == "rock"
+    || userInput == "scissors" && computerInput == "paper") {
+    alert("You won!")
+} else {
+    alert("You lost!")
+}
